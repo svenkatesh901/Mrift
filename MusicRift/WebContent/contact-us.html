@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Contact Us | MusicRift</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/price-range.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+
+	<script src="js/searchdata.json"></script>
+		 
+</head><!--/head-->
+
+<body>
+	<header id="header"><!--header-->
+		<div class="header_top"><!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="contactinfo">
+							<ul class="nav nav-pills">
+								<li><a href=""><i class="fa fa-envelope"></i> info@musicrift.com</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="social-icons pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href=""><i class="fa fa-facebook"></i></a></li>
+								<li><a href=""><i class="fa fa-twitter"></i></a></li>
+								<li><a href=""><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header_top-->
+		<div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="logo pull-left">
+							<a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+						</div>
+					</div>
+					<div class="col-sm-8">
+						<div class="shop-menu pull-right" style="margin-top:20px">
+							<ul class="nav navbar-nav">
+								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
+								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
+								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-middle-->
+	
+		<div class="header-bottom"><!--header-bottom-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="mainmenu pull-left">
+							<ul class="nav navbar-nav collapse navbar-collapse">
+								<li><a href="index.html">Home</a></li>
+								<li class="dropdown"><a href="#">Products<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="guitars.html">Guitars</a></li>
+										<li><a href="pianos.html">Pianos</a></li> 
+										<li><a href="violins.html">Violins</a></li> 
+										<li><a href="drums.html">Drums</a></li>  
+                                    </ul>
+                                </li> 
+								<li><a href="contact-us.html"  class="active">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="search_box pull-right">
+							<div class="ui-widget">
+								<form method="get" name="searchform" id="searchform" action="search.html">
+									 <input name="search" type="text" id="search" class="field" placeholder="Quick search..." title="Quick search..." />
+								</form>
+							</div>
+						</div>
+						 
+						<script>
+							  $(document).ready(function() {
+							  $(function() 
+							  {
+								  var availableTags = [];
+
+								  for(var obj in data){
+								   availableTags[obj]=data[obj].name;
+								  }
+
+								  $( "#search" ).autocomplete({
+									  source: availableTags
+								  });
+							  
+									$(function() {
+										$("form input").keypress(function (e) {
+											if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+											
+												var search=document.getElementById("search").value;
+												var url="search.html?search="+search
+												$(location).attr('href',url);
+											}
+										});
+									});
+
+							  }); });
+							  </script>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-bottom-->
+	</header><!--/header-->
+	
+	<section><!--slider-->
+		<div class="container">
+			
+			<h1>Contact Us</h1>
+			<div style="color:black;">
+				<p >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MusicRift is committed to customer satisfaction and that is why we pay close attention to our customer. Below are the different ways to get in touch with our customer service. </p>
+			<br></br>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We have a well trained team of permanent staff to our customer service. Every day before the customer opens, there is a team meeting in which the current daily offer will be discussed so that the correct 1st line support can be given. Telephone To report faults or incorrect deliveries You can hold our RMA department.</p>
+			<br></br>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Email Id:</b> info@musicrift.com</p>
+			</div>
+			<br><br>
+			<form id="contactus" method="post" action="" class="form-horizontal">
+                        <fieldset>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Problem</label>
+                                <div class="col-lg-5">
+                                    <input type="textarea" class="form-control" name="problem" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Email</label>
+                                <div class="col-lg-5">
+                                    <input type="text" class="form-control" name="email" />
+                                </div>
+                            </div>
+                           
+								<div class="form-group">
+									<div class="col-lg-9 col-lg-offset-3">
+										<button type="submit" class="btn btn-primary">Send Complaint</button>
+									</div>
+								</div>
+                        </fieldset>
+                    </form>
+					
+			<br><br><br><br><br>
+		</form><!-- form -->
+		</div>
+	</section>
+	
+	 <footer id="footer"><!--Footer-->
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="companyinfo">
+							<h2><span>Music Rift</span></h2>
+							<p></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+			
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<p class="pull-left">Copyright © 2013-14 MSIT. All rights reserved.</p>
+					<p class="pull-right">Designed by Poornima, Sowmya, Venkatesh, Mallamala and Chaitanya.</p>
+				</div>
+			</div>
+		</div>
+		
+	</footer><!--/Footer-->
+	
+
+	<script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

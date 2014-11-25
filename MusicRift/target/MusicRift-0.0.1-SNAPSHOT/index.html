@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Home | MusicRift</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/price-range.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+	<script src="js/searchdata.json"></script>
+	<script src="js/my-script.js"></script> 
+
+	<!----search related scripts---->
+ 
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script type="text/javascript" language="javascript" src="js/searchdata.json"></script> 
+
+ 
+  <script>
+  $(function() 
+  {
+	  var availableTags = [];
+
+	  for(var obj in data){
+	   availableTags[obj]=data[obj].name;
+	  }
+
+	  $( "#search" ).autocomplete({
+		  source: availableTags
+	  });
+  
+		$(function() {
+			$("form input").keypress(function (e) {
+				if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+					var search=document.getElementById("search").value;
+					var url="search.html?search="+search
+					$(location).attr('href',url);
+				}
+			});
+		});
+
+  });
+  </script>
+</head>
+<body>
+
+
+ 
+
+
+
+
+<header id="header"><!--header-->
+		<div class="header_top"><!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="contactinfo">
+							<ul class="nav nav-pills">
+								<li><a href=""><i class="fa fa-envelope"></i> info@musicrift.com</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="social-icons pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href=""><i class="fa fa-facebook"></i></a></li>
+								<li><a href=""><i class="fa fa-twitter"></i></a></li>
+								<li><a href=""><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header_top-->
+		<div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="logo pull-left">
+							<a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+						</div>
+					</div>
+					<div class="col-sm-8">
+						<div class="shop-menu pull-right" style="margin-top:20px">
+							<ul class="nav navbar-nav">
+								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
+								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
+								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-middle-->
+	     
+		
+
+		<div class="header-bottom"><!--header-bottom-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						
+						<div class="mainmenu pull-left">
+							<ul class="nav navbar-nav collapse navbar-collapse">
+								<li><a href="index.html" class="active">Home</a></li>
+								<li class="dropdown"><a href="#">Products<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="guitars.html">Guitars</a></li>
+										<li><a href="pianos.html">Pianos</a></li> 
+										<li><a href="violins.html">Violins</a></li> 
+										<li><a href="drums.html">Drums</a></li>  
+                                    </ul>
+                                </li> 
+								<li><a href="contact-us.html">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+						<div class="col-sm-3">
+						<div class="search_box pull-right">
+					 <div class="ui-widget">
+ <form method="get" name="searchform" id="searchform" action="search.html">
+  <input name="search" type="text" id="search" class="field" placeholder="Quick search..." title="Quick search..." />
+ </form>
+</div></div></div>
+				</div>
+			</div>
+		</div><!--/header-bottom-->
+	</header><!--/header-->
+	
+	<section id="slider"><!--slider-->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+							<li data-target="#slider-carousel" data-slide-to="1"></li>
+							<li data-target="#slider-carousel" data-slide-to="2"></li>
+						</ol>
+						
+						<div class="carousel-inner">
+							<div class="item active">
+								<div class="col-sm-6">
+									<h1><span>OFFERS </span></h1>
+									<h2><span>ON ASHTON VIOLINS</span></h2>
+									<p>Ashton is proving a big offers on Accordions Violins.Starting price is just Rs.2000/-</p>
+									<button type="button" class="btn btn-default get">Get it now</button>
+								</div>
+								<div class="col-sm-6">
+									<img src="images/home/slider1.jpg" class="girl img-responsive" alt="" />
+								</div>
+							</div>
+							<div class="item">
+								<div class="col-sm-6">
+									<h1><span>EXCITING OFFERS</span></h1>
+									<h2>ON PEARL DRUMS</h2>
+									<p>Pearl offering a big discount on drums as diwali bonanza...Hurryy!!! 
+									Discount upto 30%</p>
+									<button type="button" class="btn btn-default get">Get it now</button>
+								</div>
+								<div class="col-sm-6">
+									<img src="images/home/slider2.jpg" class="girl img-responsive" alt="" />
+								</div>
+							</div>
+							
+							<div class="item">
+								<div class="col-sm-6">
+									<h1><span>HURRYY..HURRYY!!!!!</span></h1>
+									<h2>Discount upto 40%</h2>
+									<p>A big dicounts on all kind of pianoss...Hurry the dicount will closed soon... </p>
+									<button type="button" class="btn btn-default get">Get it now</button>
+								</div>
+								<div class="col-sm-6">
+									<img src="images/home/slider3.jpg" class="girl img-responsive" alt="" />
+								</div>
+							</div>
+							
+						</div>
+						
+						<a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+							<i class="fa fa-angle-left"></i>
+						</a>
+						<a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+							<i class="fa fa-angle-right"></i>
+						</a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section><!--/slider-->
+	
+	<section>
+		<div class="container">
+			<div class="row">
+				
+				
+				<div class="col-sm-12 padding-right">
+					<div class="our-products"><!--features_items-->
+						<br><br>
+						<h2 class="title text-center">Our Products</h2>
+								<div class="col-sm-3" >
+									<div class="grid">
+										<div class="product-image-wrapper">
+											<div class="home-products">
+												<div class="productinfo text-center">
+													<img src="images/home/guitar.jpg" class="image-products"  alt="" />
+													<h4>Guitars</h4>
+													<p>Starting at Rs. 1000</p>
+													<a href="guitars.html" class="btn btn-default">view</a>
+													
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="grid">
+										<div class="product-image-wrapper">
+											<div class="home-products">
+												<div class="productinfo text-center">
+													<img src="images/home/piano.jpg" class="image-products" alt="" />
+													<h4>Pianos</h4>
+													<p>Starting at Rs. 1000</p>
+													<a href="pianos.html" class="btn btn-default ">View</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="grid">
+										<div class="product-image-wrapper">
+											<div class="home-products">
+												<div class="productinfo text-center">
+													<img src="images/home/violin.jpg" class="image-products"  alt="" />
+													<h4>Viloins</h4>
+													<p>Starting at Rs. 1000</p>
+													<a href="violins.html" class="btn btn-default">View</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="grid">
+										<div class="product-image-wrapper">
+											<div class="home-products">
+												<div class="productinfo text-center">
+													<img src="images/home/drums.jpg"  class="image-products"  alt="" />
+													<h4>Drums</h4>
+													<p>Starting at Rs. 1000</p>
+													<a href="drums.html" class="btn btn-default">View</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							
+							
+									
+							</div>
+						</div>
+					</div><!--/category-tab-->
+					<div class="recommended_items"><!--recommended_items-->
+						<br><br>
+						<h2 class="title text-center">New Products</h2>
+						
+						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner" id="new">
+								<div class="item active">	
+									<div class="col-sm-3">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/guitars/ayg1.jpg" alt=""  width="200" height="200"/>
+													<h2>Rs. 8400</h2>
+													<p>YAMAHA ACOUSTIC GUITAR F310 (NATURAL)</p>
+													<a href="details.html?id=GUI001" class="btn btn-default add-to-cart">view</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-3">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/guitars/aig2.jpg" alt=""  width="200" height="200"/>
+													<h2>Rs. 17900</h2>
+													<p>IBANEZ SEMI ACOUSTIC GUITAR AEG10II-VS</p>
+													<a href="details.html?id=GUI002" class="btn btn-default add-to-cart">view</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-3">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/guitars/efg3.jpg" alt=""  width="200" height="200"/>
+													<h2>Rs. 48567</h2>
+													<p>FENDER STANDARD STRATOCASTER LEFT-HANDED</p>
+													<a href="details.html?id=GUI003" class="btn btn-default add-to-cart">view</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-3">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/guitars/strings_alice.jpg" alt=""  width="200" height="200"/>
+													<h2>Rs. 297</h2>
+													<p>ALICE ACOUSTIC GUITAR STRINGS - 2 PIECES</p>
+													<a href="details.html?id=GUI005" class="btn btn-default add-to-cart">view</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="col-sm-3">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/guitars/efg3.jpg" alt=""  width="200" height="200"/>
+													<h2>Rs. 48567</h2>
+													<p>FENDER STANDARD STRATOCASTER LEFT-HANDED</p>
+													<a href="details.html?id=GUI003" class="btn btn-default add-to-cart">view</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-3">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/guitars/aig2.jpg" alt=""  width="200" height="200"/>
+													<h2>Rs. 17900</h2>
+													<p>IBANEZ SEMI ACOUSTIC GUITAR AEG10II-VS</p>
+													<a href="details.html?id=GUI002" class="btn btn-default add-to-cart">view</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-3">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/guitars/ayg1.jpg" alt=""  width="200" height="200"/>
+													<h2>Rs. 8400</h2>
+													<p>YAMAHA ACOUSTIC GUITAR F310 (NATURAL)</p>
+													<a href="details.html?id=GUI001" class="btn btn-default add-to-cart">view</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-3">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/guitars/strings_alice.jpg" alt=""  width="200" height="200"/>
+													<h2>Rs. 297</h2>
+													<p>ALICE ACOUSTIC GUITAR STRINGS - 2 PIECES</p>
+													<a href="details.html?id=GUI005" class="btn btn-default add-to-cart">view</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+							<a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
+								<i class="fa fa-angle-left"></i>
+							  </a>
+							  <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
+								<i class="fa fa-angle-right"></i>
+							  </a>		
+							  <!--<script>products_home_new();</script>-->
+						</div>
+						<br><br><br><br>
+					</div><!--/recommended_items-->					
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<footer id="footer"><!--Footer-->
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="companyinfo">
+							<h2><span>Music Rift</span></h2>
+							<p></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+			
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<p class="pull-left">Copyright © 2013-14 MSIT. All rights reserved.</p>
+					<p class="pull-right">Designed by Poornima, Sowmya, Venkatesh, Mallamala and Chaitanya.</p>
+				</div>
+			</div>
+		</div>
+		
+	</footer><!--/Footer-->
+
+ 
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+ <script src="js/main.js"></script>
+ <script src="js/price-range.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+ 
+</body>
+</html>

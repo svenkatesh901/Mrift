@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Drums | MusicRift</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/price-range.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/my-script.js"></script> 
+
+	<script src="js/searchdata.json"></script>
+	   
+	
+   <script>
+  $(document).ready(function() {
+    $('#list').click(function(event){event.preventDefault();$('#products .item1').removeClass('col-sm-4');$('#products .item1').addClass('list-item');$('#products .check').removeClass('grid');$('#products .check').addClass('list col-sm-12');});
+    $('#grid').click(function(event){event.preventDefault();$('#products .item1').removeClass('list-item');$('#products .item1').addClass('col-sm-4');$('#products .check').removeClass('list col-sm-12');$('#products .check').addClass('grid');});
+});
+
+ </script>
+</head><!--/head-->
+
+<body>
+	<header id="header"><!--header-->
+		<div class="header_top"><!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="contactinfo">
+							<ul class="nav nav-pills">
+								<li><a href=""><i class="fa fa-envelope"></i> info@musicrift.com</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="social-icons pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href=""><i class="fa fa-facebook"></i></a></li>
+								<li><a href=""><i class="fa fa-twitter"></i></a></li>
+								<li><a href=""><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header_top-->
+		<div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="logo pull-left">
+							<a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+						</div>
+					</div>
+					<div class="col-sm-8">
+						<div class="shop-menu pull-right" style="margin-top:20px">
+							<ul class="nav navbar-nav">
+								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
+								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
+								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-middle-->
+	
+		<div class="header-bottom"><!--header-bottom-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="mainmenu pull-left">
+							<ul class="nav navbar-nav collapse navbar-collapse">
+								<li><a href="index.html">Home</a></li>
+								<li class="dropdown"><a href="#">Products<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="guitars.html">Guitars</a></li>
+										<li><a href="pianos.html">Pianos</a></li> 
+										<li><a href="violins.html">Violins</a></li> 
+										<li><a href="drums.html" class="active">Drums</a></li>  
+                                    </ul>
+                                </li> 
+								<li><a href="contact-us.html">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="search_box pull-right">
+							<div class="ui-widget">
+								<form method="get" name="searchform" id="searchform" action="search.html">
+									 <input name="search" type="text" id="search" class="field" placeholder="Quick search..." title="Quick search..." />
+								</form>
+							</div>
+						</div>
+						 
+						<script>
+							  $(document).ready(function() {
+							  $(function() 
+							  {
+								  var availableTags = [];
+
+								  for(var obj in data){
+								   availableTags[obj]=data[obj].name;
+								  }
+
+								  $( "#search" ).autocomplete({
+									  source: availableTags
+								  });
+							  
+									$(function() {
+										$("form input").keypress(function (e) {
+											if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+												//alert("yes");
+												var search=document.getElementById("search").value;
+												var url="search.html?search="+search
+												$(location).attr('href',url);
+											}
+										});
+									});
+
+							  }); });
+							  </script>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-bottom-->
+	</header><!--/header-->
+	
+		
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="btn-group pull-right">
+					<a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
+					</span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span
+						class="glyphicon glyphicon-th"></span>Grid</a>
+				</div>
+				<br/>
+		    </div>
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="left-sidebar">
+						<h2>Type</h2>
+						<div class="panel-group category-products" id="accordian"><!--type-productsr-->
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title" >
+										<input type="checkbox"
+										name="check[]"
+										value="coustic Drumkits"/> 
+										<font color="grey">coustic Drumkits</font>
+									</h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<input type="checkbox"
+										name="check[]"
+										value="Care and Maintenance"/> 
+										<font color=grey>Care and Maintenance</font>
+									</h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<input type="checkbox"
+										name="check[]"
+										value="Strings"/> 
+										<font color=grey>Strings</font>
+									</h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<input type="checkbox"
+										name="check[]"
+										value="Dampening and Noise Control"/>
+										<font color="grey">Dampening & Noise Control</font>
+									</h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<input type="checkbox"
+										name="check[]"
+										value="Drum Heads"/>
+										<font color="grey">Drum Heads</font>
+									</h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<input type="checkbox"
+										name="check[]"
+										value="Drum Triggers"/>
+										<font color="grey">Drum Triggers</font>
+									</h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<input type="checkbox"
+										name="check[]"
+										value="Drums Hardware"/>
+										<font color="grey">Drums Hardware</font>
+									</h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<input type="checkbox"
+										name="check[]"
+										value="Sticks and Mallets"/>
+										<font color="grey">Sticks and Mallets</font>
+									</h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<input type="checkbox"
+										name="check[]"
+										value="Stands and Racks"/>
+										<font color="grey">Stands and Racks</font>
+									</h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<input type="checkbox"
+										name="check[]"
+										value="Tuners and Metronomes"/>
+										<font color="grey">Tuners and Metronomes</font>
+									</h4>
+								</div>
+							</div>
+						</div><!--/type-products-->
+					
+						<div class="brands_products"><!--brands_products-->
+							<h2>Brands</h2>
+							<div class="brands-name">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<input type="checkbox"
+										name="Brand[]"
+										value="Alesis"/>
+										<font color="grey">Alesis</font>
+									</h4>
+								</div>
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<input type="checkbox"
+										name="Brand[]"
+										value="Apex"/>
+										<font color="grey">Apex</font>
+									</h4>
+								</div>
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<input type="checkbox"
+										name="Brand[]"
+										value="Bespeco"/>
+										<font color="grey">Bespeco</font>
+									</h4>
+								</div>
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<input type="checkbox"
+										name="Brand[]"
+										value="Boss"/>
+										<font color="grey">Boss</font>
+									</h4>
+								</div>
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<input type="checkbox"
+										name="Brand[]"
+										value="Dadi"/>
+										<font color="grey">Dadi
+								</div>
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<input type="checkbox"
+										name="Brand[]"
+										value="Evans"/>
+										<font color="grey">Evans</font>
+									</h4>
+								</div>
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<input type="checkbox"
+										name="Brand[]"
+										value="GC"/>
+										<font color="grey">GC</font>
+									</h4>
+								</div>
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<input type="checkbox"
+										name="Brand[]"
+										value="Pearl"/>
+										<font color="grey">Pearl</font>
+									</h4>
+								</div>
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<input type="checkbox"
+										name="Brand[]"
+										value="Rockstar"/>
+										<font color="grey">Rockstar</font>
+									</h4>
+								</div>
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<input type="checkbox"
+										name="Brand[]"
+										value="SaReGaMar"/>
+										<font color="grey">SaReGaMa</font>
+									</h4>
+								</div>
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<input type="checkbox"
+										name="Brand[]"
+										value="Yamaha"/>
+										<font color="grey">Yamaha</font>
+									</h4>
+								</div>
+							</div>
+						</div><!--/brands_products-->
+						
+						<div class="price-range"><!--price-range-->
+							<h2>Price Range</h2>
+							<div class="brands-name">
+									<div class="panel-heading">
+									<h4 class="panel-title">
+										<input class="down-margin" type="checkbox"
+											name="p[]"
+											value="1"/>
+											<font color="grey">Below Rs.1000</font>
+									</h4>
+								</div>
+									<div class="panel-heading">
+									<h4 class="panel-title">
+										<input class="down-margin" type="checkbox"
+											name="p[]"
+											value="2"/>
+											<font color="grey">Rs.1000-3000</font>
+									</h4>
+								</div>
+									<div class="panel-heading">
+									<h4 class="panel-title">
+										<input class="down-margin" type="checkbox"
+											name="p[]"
+											value="3"/>
+											<font color="grey">Rs.3000-5000</font>
+									</h4>
+								</div>
+									<div class="panel-heading">
+									<h4 class="panel-title">
+										<input class="down-margin" type="checkbox"
+											name="p[]"
+											value="4"/>
+											<font color="grey">Rs.5000-7000</font>
+									</h4>
+								</div>
+									<div class="panel-heading">
+									<h4 class="panel-title">
+										<input class="down-margin" type="checkbox"
+											name="p[]"
+											value="5"/>
+											<font color="grey">Rs.7000-9000</font>
+									</h4>
+								</div>
+									<div class="panel-heading">
+									<h4 class="panel-title">
+										<input class="down-margin" type="checkbox"
+											name="p[]"
+											value="6"/>
+											<font color="grey">Above Rs.9000</font>
+									</h4>
+								</div>
+							</div>
+						</div><!--/price-range-->
+											
+					</div>
+				</div>
+				
+				<div class="col-sm-9 padding-right">
+					<div class="features_items" id="products"><!--features_items-->
+						<h2 class="title text-center">Search Results</h2>
+						<input type="hidden" name="protype" id="protype" value="drums" />
+						<div id="results">
+						</div>
+						<script type="text/javascript">display_products();</script>
+						
+					</div><!--features_items-->
+					
+					
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	 <footer id="footer"><!--Footer-->
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="companyinfo">
+							<h2><span>Music Rift</span></h2>
+							<p></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+			
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<p class="pull-left">Copyright © 2013-14 MSIT. All rights reserved.</p>
+					<p class="pull-right">Designed by Poornima, Sowmya, Venkatesh, Mallamala and Chaitanya.</p>
+				</div>
+			</div>
+		</div>
+		
+	</footer><!--/Footer-->
+
+	<script src="js/filters.js"></script>
+	<script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

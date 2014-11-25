@@ -1,0 +1,393 @@
+var data =[{
+		"id":"GUI001",
+		"name":"YAMAHA ACOUSTIC GUITAR F310 (NATURAL)",
+		"category":"guitar",
+		"type":"Acoustic Guitars",
+		"brand":"Yamaha",
+		"price":"8400",
+		"description":"This is the description of this product",
+		"image":"images/guitars/ayg1.jpg"
+	},
+	{
+		"id":"GUI002",
+		"name":"IBANEZ SEMI ACOUSTIC GUITAR AEG10II-VS",
+		"category":"guitar",
+		"type":"Acoustic Guitars",
+		"brand":"Ibanez",
+		"price":"17900",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"GUI003",
+		"name":"FENDER STANDARD STRATOCASTER LEFT-HANDED",
+		"category":"guitar",
+		"type":"Stands and Racks",
+		"brand":"Fender",
+		"price":"48567",
+		"description":"This is the description of this product",
+		"image":"images/guitars/efg3.jpg"
+	},
+	{
+		"id":"GUI004",
+		"name":"ARIA STG-005 SERIES ELECTRIC GUITAR",
+		"category":"guitar",
+		"type":"Electric Guitars",
+		"brand":"Aria",
+		"price":"9700",
+		"description":"This is the description of this product",
+		"image":"images/guitars/efg3.jpg"
+	},
+	{
+		"id":"GUI005",
+		"name":"EG-Ib-3000",
+		"category":"ALICE ACOUSTIC GUITAR STRINGS - 2 PIECES",
+		"type":"Strings",
+		"brand":"Alice",
+		"price":"297",
+		"description":"This is the description of this product",
+		"image":"images/guitars/strings_alice.jpg"
+	},
+	{
+		"id":"GUI006",
+		"name":"HERCULES GS402B, ELECTRIC/BASS GUITAR MINI STAND, BLACK",
+		"category":"guitar",
+		"type":"Stand and Racks",
+		"brand":"Hercules",
+		"price":"1475",
+		"description":"This is the description of this product",
+		"image":"images/guitars/stand_hercules.jpg"
+	},
+	{
+		"id":"GUI007",
+		"name":"YAMAHA CLASSICAL GUITAR <br> C40",
+		"category":"guitar",
+		"type":"Classic Guitars",
+		"brand":"Yamaha",
+		"price":"6900",
+		"description":"This is the description of this product",
+		"image":"images/guitars/classical_yamaha.jpg"
+	},
+	{
+		"id":"GUI008",
+		"name":"YAMAHA ELECTRIC BASSES RBX374 (REB METALLIC)",
+		"category":"guitar",
+		"type":"Electric Guitars",
+		"brand":"Yamaha",
+		"price":"28405",
+		"description":"This is the description of this product",
+		"image":"images/guitars/bass_yamaha.jpg"
+	},
+	{
+		"id":"GUI09",
+		"name":"FENDER HIGHWAY ONE PRECISSION ELECTRIC BASS GUITAR",
+		"category":"guitar",
+		"type":"Electir Guitars",
+		"brand":"Fender",
+		"price":"11000",
+		"description":"This is the description of this product",
+		"image":"images/guitars/bass_fender.jpg"
+	},
+	
+
+	{
+		"id":"PIA011",
+		"name":"Sp-Ya-900",
+		"category":"piano",
+		"type":"Spinet",
+		"brand":"Yamaha",
+		"price":"900",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"PIA012",
+		"name":"Sp-se-2000",
+		"category":"piano",
+		"type":"Spinet",
+		"brand":"Seiler",
+		"price":"2000",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"PIA013",
+		"name":"Sp-bo-5000",
+		"category":"piano",
+		"type":"Spinet",
+		"brand":"Boston",
+		"price":"5000",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"PIA014",
+		"name":"Con-Ya-1500",
+		"category":"piano",
+		"type":"Console",
+		"brand":"Yamaha",
+		"price":"1500",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"PIA015",
+		"name":"Co-se-4000",
+		"category":"piano",
+		"type":"Console",
+		"brand":"Seiler",
+		"price":"4000",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"PIA016",
+		"name":"Co-Bos-3000",
+		"category":"piano",
+		"type":"Console",
+		"brand":"Boston",
+		"price":"3000",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"PIA017",
+		"name":"St-Yam-7000",
+		"category":"piano",
+		"type":"Studio",
+		"brand":"Yamaha",
+		"price":"7000",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"PIA018",
+		"name":"Stu-Yah-5000",
+		"category":"piano",
+		"type":"Studio",
+		"brand":"Yamaha",
+		"price":"5000",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"PIA019",
+		"name":"Stu-Sei-9000",
+		"category":"piano",
+		"type":"Studio",
+		"brand":"Seiler",
+		"price":"9000",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"PIA020",
+		"name":"Stu-Bos-11000",
+		"category":"piano",
+		"type":"Studio",
+		"brand":"Boston",
+		"price":"11000",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"VIO021",
+		"name":"Sp-Ya-900",
+		"category":"violin",
+		"type":"Accordions",
+		"brand":"Alice",
+		"price":"900",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"VIO022",
+		"name":"Sp-se-2000",
+		"category":"violin",
+		"type":"Accordions",
+		"brand":"Calcutta Musical Depot",
+		"price":"2000",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"VIO023",
+		"name":"Sp-bo-5000",
+		"category":"violin",
+		"type":"Accordions",
+		"brand":"Ashton",
+		"price":"5000",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"VIO024",
+		"name":"Con-Ya-1500",
+		"category":"violin",
+		"type":"Collectibles",
+		"brand":"Calcutta Musical Depot",
+		"price":"1500",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"VIO025",
+		"name":"Co-se-4000",
+		"category":"violin",
+		"type":"Collectibles",
+		"brand":"Ashton",
+		"price":"4000",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"VIO026",
+		"name":"Co-Bos-3000",
+		"category":"violin",
+		"type":"Collectibles",
+		"brand":"Ashton",
+		"price":"3000",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"VIO027",
+		"name":"St-Yam-7000",
+		"category":"violin",
+		"type":"Collectibles",
+		"brand":"Alice",
+		"price":"7000",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"VIO028",
+		"name":"Stu-Yah-5000",
+		"category":"violin",
+		"type":"Strings",
+		"brand":"Ashton",
+		"price":"5000",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"VIO029",
+		"name":"Stu-Sei-9000",
+		"category":"violin",
+		"type":"Strings",
+		"brand":"Calcutta Musical Depot",
+		"price":"9000",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"VIO030",
+		"name":"Stu-Bos-11000",
+		"category":"violin",
+		"type":"Strings",
+		"brand":"Alice",
+		"price":"11000",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"DRU031",
+		"name":"Sp-Ya-900",
+		"category":"drums",
+		"type":"coustic Drumkits",
+		"brand":"Bespeco",
+		"price":"900",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"DRU032",
+		"name":"Sp-se-2000",
+		"category":"drums",
+		"type":"coustic Drumkits",
+		"brand":"Apex",
+		"price":"2000",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"DRU033",
+		"name":"Sp-bo-5000",
+		"category":"drums",
+		"type":"coustic Drumkits",
+		"brand":"Alesis",
+		"price":"5000",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"DRU034",
+		"name":"Con-Ya-1500",
+		"category":"drums",
+		"type":"Care and Maintenance",
+		"brand":"Apex",
+		"price":"1500",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"DRU035",
+		"name":"Co-se-4000",
+		"category":"drums",
+		"type":"Care and Maintenance",
+		"brand":"Bespeco",
+		"price":"4000",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"DRU036",
+		"name":"Co-Bos-3000",
+		"category":"drums",
+		"type":"Care and Maintenance",
+		"brand":"Alesis",
+		"price":"3000",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"DRU037",
+		"name":"St-Yam-7000",
+		"category":"drums",
+		"type":" Dampening and Noise Control",
+		"brand":"Bespeco",
+		"price":"7000",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"DRU038",
+		"name":"Stu-Yah-5000",
+		"category":"drums",
+		"type":" Dampening and Noise Control",
+		"brand":"Apex",
+		"price":"5000",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"DRU039",
+		"name":"Stu-Sei-9000",
+		"category":"drums",
+		"type":" Dampening and Noise Control",
+		"brand":"Alesis",
+		"price":"9000",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	},
+	{
+		"id":"DRU040",
+		"name":"Stu-Bos-11000",
+		"category":"drums",
+		"type":" Dampening and Noise Control",
+		"brand":"Alesis",
+		"price":"11000",
+		"description":"This is the description of this product",
+		"image":"images/guitars/aig2.jpg"
+	}
+];
